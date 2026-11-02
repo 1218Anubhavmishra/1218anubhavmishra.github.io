@@ -1,1 +1,46 @@
-# 1218anubhavmishra.github.io
+# Anubhav Mishra | Portfolio
+
+Personal portfolio of Anubhav Mishra, an MCA student and full stack developer.
+
+**Live site:** https://1218anubhavmishra.github.io
+
+## Featured projects
+
+| Project | Summary | Tech |
+| --- | --- | --- |
+| StemGuess | Multiplayer "name that song" game built from song stems, with real-time rounds, hints, filters and spectating | React, TypeScript, Socket.IO, Python, FastAPI, PostgreSQL |
+| Voice Vault | Audio notes app with transcripts and search by text or voice ([live](https://www.voicevault.xyz), [apps](https://github.com/1218Anubhavmishra/NoteVault)) | Node.js, PostgreSQL, Docker |
+| Sports Academy Portal | Web app for running a sports academy's management tasks online ([code](https://github.com/1218Anubhavmishra/Sports_mastery)) | Python, Django, SQLite |
+| Travel Aid | Android ride-sharing app with proportional cost splitting, built for Novathon 2022 ([code](https://github.com/1218Anubhavmishra/TravelMate)) | Java, Android Studio |
+| Food Ordering | Restaurant ordering and delivery prototype ([code](https://github.com/1218Anubhavmishra/food_website)) | JavaScript, HTML/CSS |
+
+## Skills
+
+- **Languages:** Python, Java, JavaScript and TypeScript, C and C++, SQL, HTML/CSS
+- **Frameworks and tools:** Django, FastAPI and Node.js; React and Socket.IO; Android Studio and Capacitor; MySQL, PostgreSQL and SQLite; Docker; Visual Studio, Git and GitHub
+- **Working style:** Agile, problem solving, quick analysis, careful observer, decisive
+- **Spoken languages:** Hindi, English
+
+## Background
+
+**Training**
+
+- Python, Django and Machine Learning project training, Precursor Info Solutions Pvt Ltd, Lucknow (Jan-May 2023)
+- Python project instructor intern, TechnoConnect IT Solutions Pvt Ltd (6 months)
+
+**Education**
+
+- Master of Computer Applications, Galgotias University, Greater Noida (2023-2025), CGPA 7.7
+- Bachelor of Computer Applications, Babu Banarasi Das University, Lucknow (2020-2023), CGPA 8.4
+
+**Certificates**
+
+- Big Data Computing, NPTEL Elite certificate from IIT Kanpur (Aug-Oct 2024)
+- Soft Skills, Learnovate Enterprises Soft Skill Program at BBD Group (Oct 2023)
+- Mobile Application Course, BBDU
+
+## Contact
+
+- Email: 2427anubhavmishra@gmail.com
+- GitHub: [1218Anubhavmishra](https://github.com/1218Anubhavmishra)
+- LinkedIn: [anubhav-mishra-0339b3201](https://www.linkedin.com/in/anubhav-mishra-0339b3201)

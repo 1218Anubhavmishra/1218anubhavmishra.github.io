@@ -57,6 +57,16 @@ h3{font:700 1.35rem/1.25 var(--display);margin:0}
 .proj:last-child{border-bottom:0}
 .proj .when{color:var(--muted);font-size:15px}
 .proj p{margin:8px 0;max-width:42em}
+.proj .sum{margin:8px 0 6px}
+.more{margin-top:12px}
+.more summary{display:inline-block;list-style:none;cursor:pointer;border:1.5px solid var(--accent);color:var(--accent);border-radius:8px;padding:6px 16px;font-weight:500;font-size:15px}
+.more summary::-webkit-details-marker{display:none}
+.more summary:hover{background:var(--surface)}
+.more summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.more summary .hide{display:none}
+.more[open] summary .show{display:none}
+.more[open] summary .hide{display:inline}
+.more[open] summary{margin-bottom:8px}
 .stack{color:var(--muted);font-size:15px}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
 .skills h3{font-size:1.05rem;margin-bottom:8px}
@@ -92,7 +102,7 @@ footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
       <h1>Anubhav Mishra</h1>
       <p class="lead">I’m a <b>full stack developer</b> and MCA student at Galgotias University. I build web and Android applications with Python, Django, Java and JavaScript, and I’m looking for a role where I can keep sharpening those skills on real products.</p>
       <div class="btns">
-        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn primary" href="#skills">My skills</a>
         <a class="btn ghost" href="#contact">Get in touch</a>
       </div>
     </div>
@@ -103,9 +113,13 @@ footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
         <div class="when">2026</div>
         <div>
           <h3>StemGuess</h3>
-          <p>A multiplayer “name that song” game. Each round loops a short clip built from a song’s stems and shows four titles. Players pick once, and a correct answer scores 10 points at the start of the round, falling to 1 at the buzzer. Halfway through, a player can remove wrong options for a lower score. Hosts choose the song library, filters, game length and room size, and late joiners can spectate. There is also a solo practice mode.</p>
-          <p>I built the whole stack: a real-time game server in Python, a React client that also builds as an Android app, a song pipeline that splits tracks into stems and stores them in the cloud, and an option to play with your own music, with vocals removed in the browser.</p>
+          <p class="sum">A multiplayer “name that song” game built from song stems, with real-time rounds.</p>
           <div class="stack">Live website · React, TypeScript, Socket.IO, Web Audio, Capacitor, Python, FastAPI, SQLAlchemy, PostgreSQL, Cloudflare R2, Render<!-- To add a link, put it here: · <a href="https://YOUR-STEMGUESS-URL" target="_blank" rel="noopener">Play StemGuess</a> --></div>
+          <details class="more">
+            <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+            <p>A multiplayer “name that song” game. Each round loops a short clip built from a song’s stems and shows four titles. Players pick once, and a correct answer scores 10 points at the start of the round, falling to 1 at the buzzer. Halfway through, a player can remove wrong options for a lower score. Hosts choose the song library, filters, game length and room size, and late joiners can spectate. There is also a solo practice mode.</p>
+            <p>I built the whole stack: a real-time game server in Python, a React client that also builds as an Android app, a song pipeline that splits tracks into stems and stores them in the cloud, and an option to play with your own music, with vocals removed in the browser.</p>
+          </details>
         </div>
       </article>
 
@@ -113,9 +127,13 @@ footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
         <div class="when">2026</div>
         <div>
           <h3>Voice Vault</h3>
-          <p>An audio notes app with search across all your notes. Record in the browser or upload audio, and the server turns it into a transcript that labels who spoke each line and tags sounds like laughter or music. You can then search every note by typing or by recording a short voice query, using plain language and time filters such as “yesterday” or “last 3 days”, and click any transcript segment to hear that moment.</p>
-          <p>I built it end to end: accounts with login, password reset and account deletion, a Node.js API running in Docker, and a PostgreSQL database that holds the notes, audio and search index. Search combines keyword matching with semantic retrieval. The same frontend is packaged for Android, iOS and desktop.</p>
+          <p class="sum">An audio notes app that transcribes recordings and lets you search every note by text or voice.</p>
           <div class="stack">JavaScript, Node.js, PostgreSQL, Docker, ElevenLabs Scribe, Vercel, Render · <a href="https://www.voicevault.xyz" target="_blank" rel="noopener">Live website</a> · <a href="https://github.com/1218Anubhavmishra/NoteVault" target="_blank" rel="noopener">Apps source code</a></div>
+          <details class="more">
+            <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+            <p>An audio notes app with search across all your notes. Record in the browser or upload audio, and the server turns it into a transcript that labels who spoke each line and tags sounds like laughter or music. You can then search every note by typing or by recording a short voice query, using plain language and time filters such as “yesterday” or “last 3 days”, and click any transcript segment to hear that moment.</p>
+            <p>I built it end to end: accounts with login, password reset and account deletion, a Node.js API running in Docker, and a PostgreSQL database that holds the notes, audio and search index. Search combines keyword matching with semantic retrieval. The same frontend is packaged for Android, iOS and desktop.</p>
+          </details>
         </div>
       </article>
 
@@ -123,8 +141,12 @@ footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
         <div class="when">Jan–May 2023</div>
         <div>
           <h3>Sports Academy Portal</h3>
-          <p>A web application that lets a sports academy run its administrative and management work online, with quick information transfer between sub-departments and tools for promotion. Built during my project training at Precursor Info Solutions; I wrote the Python backend.</p>
+          <p class="sum">A web app for running a sports academy’s management work online.</p>
           <div class="stack">Python, Django, Machine Learning, SQLite · <a href="https://github.com/1218Anubhavmishra/Sports_mastery" target="_blank" rel="noopener">Source code</a></div>
+          <details class="more">
+            <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+            <p>A web application that lets a sports academy run its administrative and management work online, with quick information transfer between sub-departments and tools for promotion. Built during my project training at Precursor Info Solutions; I wrote the Python backend.</p>
+          </details>
         </div>
       </article>
 
@@ -132,8 +154,12 @@ footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
         <div class="when">Nov 2022</div>
         <div>
           <h3>Travel Aid</h3>
-          <p>An Android ride-sharing app built for Novathon 2022. Users share their vehicle with others, and the trip cost is split proportionally among all riders, including the driver. Fewer cars on the road also means less traffic and pollution. I built the Java backend.</p>
+          <p class="sum">An Android ride-sharing app that splits trip costs among riders.</p>
           <div class="stack">Java, Android Studio · <a href="https://github.com/1218Anubhavmishra/TravelMate" target="_blank" rel="noopener">Source code</a></div>
+          <details class="more">
+            <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+            <p>An Android ride-sharing app built for Novathon 2022. Users share their vehicle with others, and the trip cost is split proportionally among all riders, including the driver. Fewer cars on the road also means less traffic and pollution. I built the Java backend.</p>
+          </details>
         </div>
       </article>
 
@@ -141,8 +167,12 @@ footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
         <div class="when">Oct 2021</div>
         <div>
           <h3>Food Ordering</h3>
-          <p>A prototype website for a restaurant, letting customers order food and have it delivered to their homes. I was responsible for the JavaScript backend.</p>
+          <p class="sum">A restaurant website for ordering food and having it delivered.</p>
           <div class="stack">JavaScript, HTML/CSS · <a href="https://github.com/1218Anubhavmishra/food_website" target="_blank" rel="noopener">Source code</a></div>
+          <details class="more">
+            <summary><span class="show">Show details</span><span class="hide">Hide details</span></summary>
+            <p>A prototype website for a restaurant, letting customers order food and have it delivered to their homes. I was responsible for the JavaScript backend.</p>
+          </details>
         </div>
       </article>
     </section>
@@ -191,31 +221,30 @@ footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
           <p>CGPA 7.7</p></div>
       </div>
       <div class="row">
-        <div class="when">2023</div>
+        <div class="when">2020–2023</div>
         <div><b>Bachelor of Computer Applications</b>, Babu Banarasi Das University, Lucknow
           <p>CGPA 8.4</p></div>
       </div>
 
       <h3 style="margin-top:32px">Certificates</h3>
       <ul class="plain">
-        <li>Big Data Computing, NPTEL Elite certificate from IIT Kanpur, 73%, Aug–Oct 2024</li>
+        <li>Big Data Computing, NPTEL Elite certificate from IIT Kanpur, Aug–Oct 2024</li>
         <li>Soft Skills, Learnovate Enterprises Soft Skill Program at BBD Group, Oct 2023</li>
         <li>Mobile Application Course, BBDU</li>
       </ul>
     </section>
 
     <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>I’m open to full stack and application development roles. The quickest way to reach me is by email or LinkedIn.</p>
+      <h2>Reach me out at</h2>
       <div class="links">
-        <a href="mailto:anubhav.mishra.bca2020@bbdu.ac.in">anubhav.mishra.bca2020@bbdu.ac.in</a>
+        <a href="mailto:2427anubhavmishra@gmail.com">Gmail</a>
         <a href="https://github.com/1218anubhavmishra" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/anubhav-mishra-0339b3201" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
   </main>
 
-  <footer>© <span id="yr">2026</span> Anubhav Mishra. Greater Noida, India.</footer>
+  <footer>© <span id="yr">2026</span> Anubhav Mishra. Bangalore, India.</footer>
 </div>
 
 <script>
