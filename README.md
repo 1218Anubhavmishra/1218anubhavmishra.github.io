@@ -8,16 +8,19 @@ Personal portfolio of Anubhav Mishra, an MCA student and full stack developer.
 
 | Project | Summary | Tech |
 | --- | --- | --- |
-| StemGuess | Multiplayer "name that song" game built from song stems, with real-time rounds, hints, filters and spectating | React, TypeScript, Socket.IO, Python, FastAPI, PostgreSQL |
-| Voice Vault | Audio notes app with transcripts and search by text or voice ([live](https://www.voicevault.xyz), [apps](https://github.com/1218Anubhavmishra/NoteVault)) | Node.js, PostgreSQL, Docker |
+| StemGuess | Multiplayer "name that song" game built from song stems, with real-time rounds, hints, filters and spectating ([live](https://stem-guess-of6p.onrender.com), [code](https://github.com/1218Anubhavmishra/StemGuess)) | React, TypeScript, Socket.IO, Python, FastAPI, PostgreSQL |
+| Voice Vault | Audio notes app with transcripts and search by text or voice ([apps](https://github.com/1218Anubhavmishra/NoteVault)) | Node.js, PostgreSQL, Docker |
 | Sports Academy Portal | Web app for running a sports academy's management tasks online ([code](https://github.com/1218Anubhavmishra/Sports_mastery)) | Python, Django, SQLite |
 | Travel Aid | Android ride-sharing app with proportional cost splitting, built for Novathon 2022 ([code](https://github.com/1218Anubhavmishra/TravelMate)) | Java, Android Studio |
 | Food Ordering | Restaurant ordering and delivery prototype ([code](https://github.com/1218Anubhavmishra/food_website)) | JavaScript, HTML/CSS |
 
 ## Skills
 
-- **Languages:** Python, Java, JavaScript and TypeScript, C and C++, SQL, HTML/CSS
-- **Frameworks and tools:** Django, FastAPI and Node.js; React and Socket.IO; Android Studio and Capacitor; MySQL, PostgreSQL and SQLite; Docker; Visual Studio, Git and GitHub
+- **Languages:** Python, Java, JavaScript, TypeScript, C and C++, SQL, HTML/CSS
+- **Frontend and mobile:** React and Vite, Web Audio API and WebRTC, MediaRecorder, Android Studio, Capacitor
+- **Backend and databases:** Node.js, Django, FastAPI and SQLAlchemy, Socket.IO, PostgreSQL, MySQL, SQLite
+- **Cloud and tools:** Docker, Render and Vercel, Cloudflare R2, Git and GitHub, Visual Studio
+- **AI and audio:** Claude and Cursor, machine learning, ElevenLabs Scribe, Demucs
 - **Working style:** Agile, problem solving, quick analysis, careful observer, decisive
 - **Spoken languages:** Hindi, English
 
