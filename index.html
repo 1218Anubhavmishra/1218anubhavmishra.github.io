@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anubhav Mishra | Full Stack Developer</title>
+<meta name="description" content="Portfolio of Anubhav Mishra, an MCA student and full stack developer building web and Android applications with Python, Django, Java and JavaScript.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎙️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5f1; --surface:#e6ebe4; --ink:#172026; --muted:#52615f;
+  --line:#c5d0c8; --accent:#1f6f5c; --accent-ink:#ffffff;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10181a; --surface:#18242a; --ink:#e8efe9; --muted:#9db0aa;
+    --line:#2b3b40; --accent:#5fcfae; --accent-ink:#0b1a16;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10181a; --surface:#18242a; --ink:#e8efe9; --muted:#9db0aa;
+  --line:#2b3b40; --accent:#5fcfae; --accent-ink:#0b1a16;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--body);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+header.top nav{display:flex;gap:20px;flex-wrap:wrap}
+header.top a{color:var(--ink);text-decoration:none;font-weight:500}
+header.top a:hover{color:var(--accent)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+.hero{padding:72px 0 56px}
+.hero h1{font:800 clamp(2.8rem,9vw,6rem)/1 var(--display);letter-spacing:-.03em;margin:0 0 24px}
+.hero p.lead{font-size:1.25rem;max-width:34em;margin:0 0 32px;color:var(--muted)}
+.hero p.lead b{color:var(--ink);font-weight:500}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 1.9rem/1.2 var(--display);margin:0 0 28px;letter-spacing:-.01em}
+h3{font:700 1.35rem/1.25 var(--display);margin:0}
+.featured{background:var(--surface);border-radius:14px;padding:32px;margin-bottom:8px}
+.featured p{max-width:40em;margin:12px 0 20px}
+.tag{display:inline-block;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px;margin-bottom:12px}
+.proj{display:grid;grid-template-columns:150px 1fr;gap:8px 32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj .when{color:var(--muted);font-size:15px}
+.proj p{margin:8px 0;max-width:42em}
+.stack{color:var(--muted);font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.skills h3{font-size:1.05rem;margin-bottom:8px}
+.skills ul,.plain{list-style:none;margin:0;padding:0}
+.skills li{padding:2px 0}
+.row{display:grid;grid-template-columns:150px 1fr;gap:4px 32px;padding:18px 0}
+.row .when{color:var(--muted);font-size:15px}
+.row p{margin:4px 0 0;max-width:42em}
+.contact p{max-width:34em}
+.links{display:flex;gap:20px;flex-wrap:wrap;font-weight:500}
+footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:640px){
+  .proj,.row{grid-template-columns:1fr}
+  .hero{padding-top:40px}
+  .featured{padding:24px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Anubhav Mishra</h1>
+      <p class="lead">I’m a <b>full stack developer</b> and MCA student at Galgotias University. I build web and Android applications with Python, Django, Java and JavaScript, and I’m looking for a role where I can keep sharpening those skills on real products.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article class="proj">
+        <div class="when">2026</div>
+        <div>
+          <h3>StemGuess</h3>
+          <p>A multiplayer “name that song” game. Each round loops a short clip built from a song’s stems and shows four titles. Players pick once, and a correct answer scores 10 points at the start of the round, falling to 1 at the buzzer. Halfway through, a player can remove wrong options for a lower score. Hosts choose the song library, filters, game length and room size, and late joiners can spectate. There is also a solo practice mode.</p>
+          <p>I built the whole stack: a real-time game server in Python, a React client that also builds as an Android app, a song pipeline that splits tracks into stems and stores them in the cloud, and an option to play with your own music, with vocals removed in the browser.</p>
+          <div class="stack">Live website · React, TypeScript, Socket.IO, Web Audio, Capacitor, Python, FastAPI, SQLAlchemy, PostgreSQL, Cloudflare R2, Render<!-- To add a link, put it here: · <a href="https://YOUR-STEMGUESS-URL" target="_blank" rel="noopener">Play StemGuess</a> --></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="when">2026</div>
+        <div>
+          <h3>Voice Vault</h3>
+          <p>An audio notes app with search across all your notes. Record in the browser or upload audio, and the server turns it into a transcript that labels who spoke each line and tags sounds like laughter or music. You can then search every note by typing or by recording a short voice query, using plain language and time filters such as “yesterday” or “last 3 days”, and click any transcript segment to hear that moment.</p>
+          <p>I built it end to end: accounts with login, password reset and account deletion, a Node.js API running in Docker, and a PostgreSQL database that holds the notes, audio and search index. Search combines keyword matching with semantic retrieval. The same frontend is packaged for Android, iOS and desktop.</p>
+          <div class="stack">JavaScript, Node.js, PostgreSQL, Docker, ElevenLabs Scribe, Vercel, Render · <a href="https://www.voicevault.xyz" target="_blank" rel="noopener">Live website</a> · <a href="https://github.com/1218Anubhavmishra/NoteVault" target="_blank" rel="noopener">Apps source code</a></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="when">Jan–May 2023</div>
+        <div>
+          <h3>Sports Academy Portal</h3>
+          <p>A web application that lets a sports academy run its administrative and management work online, with quick information transfer between sub-departments and tools for promotion. Built during my project training at Precursor Info Solutions; I wrote the Python backend.</p>
+          <div class="stack">Python, Django, Machine Learning, SQLite · <a href="https://github.com/1218Anubhavmishra/Sports_mastery" target="_blank" rel="noopener">Source code</a></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="when">Nov 2022</div>
+        <div>
+          <h3>Travel Aid</h3>
+          <p>An Android ride-sharing app built for Novathon 2022. Users share their vehicle with others, and the trip cost is split proportionally among all riders, including the driver. Fewer cars on the road also means less traffic and pollution. I built the Java backend.</p>
+          <div class="stack">Java, Android Studio · <a href="https://github.com/1218Anubhavmishra/TravelMate" target="_blank" rel="noopener">Source code</a></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="when">Oct 2021</div>
+        <div>
+          <h3>Food Ordering</h3>
+          <p>A prototype website for a restaurant, letting customers order food and have it delivered to their homes. I was responsible for the JavaScript backend.</p>
+          <div class="stack">JavaScript, HTML/CSS · <a href="https://github.com/1218Anubhavmishra/food_website" target="_blank" rel="noopener">Source code</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Languages</h3>
+          <ul><li>Python</li><li>Java</li><li>JavaScript and TypeScript</li><li>C and C++</li><li>SQL</li><li>HTML/CSS</li></ul>
+        </div>
+        <div>
+          <h3>Frameworks and tools</h3>
+          <ul><li>Django, FastAPI and Node.js</li><li>React and Socket.IO</li><li>Android Studio and Capacitor</li><li>MySQL, PostgreSQL, SQLite</li><li>Docker</li><li>Visual Studio, Git and GitHub</li></ul>
+        </div>
+        <div>
+          <h3>Working style</h3>
+          <ul><li>Agile</li><li>Problem solving</li><li>Quick analysis</li><li>Careful observer</li><li>Decisive</li></ul>
+        </div>
+        <div>
+          <h3>Languages spoken</h3>
+          <ul><li>Hindi</li><li>English</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+
+      <h3>Training</h3>
+      <div class="row">
+        <div class="when">Jan–May 2023</div>
+        <div><b>Python, Django and Machine Learning project training</b>, Precursor Info Solutions Pvt Ltd, Lucknow
+          <p>Project training during my BCA final semester, where I built the Sports Academy Portal.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">6 months</div>
+        <div><b>Python project instructor intern</b>, TechnoConnect IT Solutions Pvt Ltd
+          <p>Completed the six-month Python Project Instructor internship, guiding students through Django projects in the company’s undergraduate internship programme.</p></div>
+      </div>
+
+      <h3 style="margin-top:32px">Education</h3>
+      <div class="row">
+        <div class="when">2023–2025</div>
+        <div><b>Master of Computer Applications</b>, Galgotias University, Greater Noida
+          <p>CGPA 7.7</p></div>
+      </div>
+      <div class="row">
+        <div class="when">2023</div>
+        <div><b>Bachelor of Computer Applications</b>, Babu Banarasi Das University, Lucknow
+          <p>CGPA 8.4</p></div>
+      </div>
+
+      <h3 style="margin-top:32px">Certificates</h3>
+      <ul class="plain">
+        <li>Big Data Computing, NPTEL Elite certificate from IIT Kanpur, 73%, Aug–Oct 2024</li>
+        <li>Soft Skills, Learnovate Enterprises Soft Skill Program at BBD Group, Oct 2023</li>
+        <li>Mobile Application Course, BBDU</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>I’m open to full stack and application development roles. The quickest way to reach me is by email or LinkedIn.</p>
+      <div class="links">
+        <a href="mailto:anubhav.mishra.bca2020@bbdu.ac.in">anubhav.mishra.bca2020@bbdu.ac.in</a>
+        <a href="https://github.com/1218anubhavmishra" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/anubhav-mishra-0339b3201" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="yr">2026</span> Anubhav Mishra. Greater Noida, India.</footer>
+</div>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var root = document.documentElement, btn = document.getElementById('theme');
+  try { var s = localStorage.getItem('theme'); if (s) root.setAttribute('data-theme', s); } catch(e){}
+  btn.addEventListener('click', function(){
+    var dark = root.getAttribute('data-theme') === 'dark' ||
+      (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
