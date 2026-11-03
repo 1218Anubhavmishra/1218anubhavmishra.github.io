@@ -45,7 +45,7 @@ Personal portfolio of Anubhav Mishra, an MCA graduate and full stack developer.
 
 ## Documents
 
-- Resume: `cv/anubhav-mishra-resume.pdf`
+- Resume: `resume/anubhav-mishra-resume.pdf`
 - Certificates: `certificates/` (Big Data Computing, Soft Skills, Mobile Application Development, LernX, TechnoConnect internship, Precursor project training)
 - Degrees: `degrees/` (MCA and BCA)
 
